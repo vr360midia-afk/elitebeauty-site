@@ -234,7 +234,7 @@ html, body {
   .band p { font-size: clamp(1.6rem, 5.5vw, 2.5rem); }
 
   .filter-tabs{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:20px 0 24px;padding:0;width:100%}
-  .filter-btn{width:100%;padding:10px 6px;font-size:0.68rem;letter-spacing:0.05em;text-align:center;display:flex;align-items:center;justify-content:center;white-space:nowrap}
+  .filter-btn{width:100%;padding:11px 8px;font-size:0.68rem;letter-spacing:0.04em;text-align:center;display:flex;align-items:center;justify-content:center;white-space:normal;line-height:1.25;min-height:44px;word-break:keep-all}
 
   .prod-grid { grid-template-columns: 1fr; gap: 16px; }
   .prod-media { min-height: 180px; padding: 18px 12px; }
@@ -268,6 +268,7 @@ html, body {
 @media (max-width: 480px) {
   .wrap { padding: 0 14px; }
   .btn { padding: 13px 18px; font-size: 0.66rem; letter-spacing: 0.16em; }
+  .filter-btn { padding: 10px 6px; font-size: 0.65rem; letter-spacing: 0.03em; }
   .hero h1 { font-size: clamp(1.75rem, 8vw, 2.3rem); }
   .prod-media { min-height: 160px; padding: 14px 10px; }
   .prod-media img { max-height: 135px; }
