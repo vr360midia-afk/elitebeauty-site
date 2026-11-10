@@ -54,8 +54,8 @@ li{padding:18px 0}
 /* ============================================================
    ESTILOS DOS 23 TRATAMENTOS E LINHAS PROFISSIONAIS
    ============================================================ */
-.filter-tabs{display:flex;gap:10px;overflow-x:auto;padding-bottom:12px;margin:32px 0 28px;scrollbar-width:none}
-.filter-tabs::-webkit-scrollbar{display:none}
+.filter-tabs{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:32px 0 28px;padding:0}
+
 .filter-btn{background:transparent;border:1px solid rgba(201,169,122,.35);color:var(--ink);padding:10px 18px;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;cursor:pointer;white-space:nowrap;font-family:inherit;transition:.25s;border-radius:2px}
 .dark .filter-btn{color:#f3ebe2}
 .filter-btn:hover,.filter-btn.active{background:var(--gold);color:#17110c;border-color:var(--gold)}
@@ -123,19 +123,8 @@ html, body {
   .pr { font-size: 0.95rem; }
   .ag { font-size: 0.64rem; padding-top: 2px; }
 
-  .filter-tabs {
-    gap: 8px;
-    padding: 4px 14px 12px;
-    margin: 18px -14px 18px;
-    scroll-snap-type: x proximity;
-    -webkit-overflow-scrolling: touch;
-  }
-  .filter-btn {
-    scroll-snap-align: start;
-    flex-shrink: 0;
-    padding: 8px 14px;
-    font-size: 0.68rem;
-  }
+  .filter-tabs{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:18px 0 22px;padding:0;width:100%}
+  .filter-btn{width:100%;padding:10px 6px;font-size:0.68rem;letter-spacing:0.05em;text-align:center;display:flex;align-items:center;justify-content:center;white-space:nowrap}
 
   .prod-grid { grid-template-columns: 1fr; gap: 16px; }
   .prod-media { min-height: 180px; padding: 18px 12px; }
@@ -322,10 +311,10 @@ header nav .btn{
   <div class="filter-tabs" role="tablist" aria-label="Filtrar tratamentos">
     <button class="filter-btn active" data-filter="all" type="button">Todos (23)</button>
     <button class="filter-btn" data-filter="hidratacao" type="button">Hidratação (6)</button>
-    <button class="filter-btn" data-filter="reconstrutores" type="button">Reconstrutores (2)</button>
+    <button class="filter-btn" data-filter="reconstrutores" type="button">Reconstrução (2)</button>
     <button class="filter-btn" data-filter="premium-sos" type="button">Premium SOS (5)</button>
-    <button class="filter-btn" data-filter="exclusive" type="button">Exclusive Kérastase (6)</button>
-    <button class="filter-btn" data-filter="exclusive-premium" type="button">Exclusive Premium (4)</button>
+    <button class="filter-btn" data-filter="exclusive" type="button">Kérastase (6)</button>
+    <button class="filter-btn" data-filter="exclusive-premium" type="button">Maison Visage (4)</button>
   </div>
 
   <div class="prod-grid" id="prodGrid">
